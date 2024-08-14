@@ -4,7 +4,7 @@ import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 import "./App.css";
 
-const ENDPOINT = "http://127.0.0.1:5000";
+const ENDPOINT = process.env.REACT_APP_BACKEND_HOST;
 
 function App() {
   const [orders, setOrders] = useState([]);
