@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+button.clear-button {
+  background-color: #ff4d4d; /* Red color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.clear-button:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #240000;
+  padding: 8px;
+  text-align: left;
+  position: relative; /* Required for positioning the resize handle */
+}
+
+/* Resizable box styling */
+.react-resizable {
+  display: inline-block;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  cursor: ew-resize;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+th {
+  background-color: #f4f7ee;
+}
+
+/* Default column styling */
+td, th {
+  background-color: #b4ecfc; /* Neutral color for default state */
+}
+
+/* Marketing team styling */
+.marketing td.order_number, .marketing th.order_number,
+.marketing td.party_name, .marketing th.party_name,
+.marketing td.station_name, .marketing th.station_name,
+.marketing td.division, .marketing th.division,
+.marketing td.transport, .marketing th.transport,
+.marketing td.promotional_material, .marketing th.promotional_material,
+.marketing td.date_and_time, .marketing th.date_and_time {
+  background-color: #fb00ff; /* Pink for marketing */
+}
+
+/* Packaging team styling */
+.packaging td.order_number, .packaging th.order_number,
+.packaging td.party_name, .packaging th.party_name,
+.packaging td.station_name, .packaging th.station_name,
+.packaging td.division, .packaging th.division,
+.packaging td.transport, .packaging th.transport,
+.packaging td.promotional_material, .packaging th.promotional_material,
+.packaging td.date_and_time, .packaging th.date_and_time,
+.packaging td.total_shipper, .packaging th.total_shipper,
+.packaging td.packed, .packaging th.packed,
+.packaging td.packed_time, .packaging th.packed_time {
+  background-color: #1d81fa; /* DodgerBlue for packaging */
+}
+
+/* Billing team styling */
+.billing td.order_number, .billing th.order_number,
+.billing td.party_name, .billing th.party_name,
+.billing td.station_name, .billing th.station_name,
+.billing td.division, .billing th.division,
+.billing td.transport, .billing th.transport,
+.billing td.promotional_material, .billing th.promotional_material,
+.billing td.date_and_time, .billing th.date_and_time,
+.billing td.total_shipper, .billing th.total_shipper,
+.billing td.packed, .billing th.packed,
+.billing td.packed_time, .billing th.packed_time,
+.billing td.billed, .billing th.billed,
+.billing td.billed_time, .billing th.billed_time {
+  background-color: #cf0eff; /* Purple for billing */
+}
+
+/* Dispatch team styling */
+.dispatch td.order_number, .dispatch th.order_number,
+.dispatch td.party_name, .dispatch th.party_name,
+.dispatch td.station_name, .dispatch th.station_name,
+.dispatch td.division, .dispatch th.division,
+.dispatch td.transport, .dispatch th.transport,
+.dispatch td.promotional_material, .dispatch th.promotional_material,
+.dispatch td.date_and_time, .dispatch th.date_and_time,
+.dispatch td.total_shipper, .dispatch th.total_shipper,
+.dispatch td.packed, .dispatch th.packed,
+.dispatch td.packed_time, .dispatch th.packed_time,
+.dispatch td.billed, .dispatch th.billed,
+.dispatch td.billed_time, .dispatch th.billed_time,
+.dispatch td.dispatched, .dispatch th.dispatched,
+.dispatch td.dispatched_time, .dispatch th.dispatched_time {
+  background-color: #32CD32; /* LimeGreen for dispatch */
+}
+
+.no-orders {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+.clear-button {
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #ffffff;
+}
