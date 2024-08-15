@@ -11,6 +11,9 @@ function App() {
 
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
+    socket.on("connect", () => {
+      console.log("SocketIO connected");
+    });
 
     // Handle real-time updates
     socket.on("update", (data) => {
