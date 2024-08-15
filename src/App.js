@@ -4,9 +4,9 @@ import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 import "./App.css";
 
-const ENDPOINT = process.env.REACT_APP_BACKEND_HOST;
-
 function App() {
+  const ENDPOINT = process.env.REACT_APP_BACKEND_URL;
+  console.log(ENDPOINT);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
