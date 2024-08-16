@@ -64,10 +64,11 @@ td, th {
 .marketing td.party_name, .marketing th.party_name,
 .marketing td.station_name, .marketing th.station_name,
 .marketing td.division, .marketing th.division,
+.marketing td.order_by, .marketing th.order_by,
 .marketing td.transport, .marketing th.transport,
 .marketing td.promotional_material, .marketing th.promotional_material,
 .marketing td.date_and_time, .marketing th.date_and_time {
-  background-color: #fb00ff; /* Pink for marketing */
+  background-color: #f4f498; /* Pink for marketing */
 }
 
 /* Packaging team styling */
@@ -75,13 +76,14 @@ td, th {
 .packaging td.party_name, .packaging th.party_name,
 .packaging td.station_name, .packaging th.station_name,
 .packaging td.division, .packaging th.division,
+.packaging td.order_by, .packaging th.order_by,
 .packaging td.transport, .packaging th.transport,
 .packaging td.promotional_material, .packaging th.promotional_material,
 .packaging td.date_and_time, .packaging th.date_and_time,
 .packaging td.total_shipper, .packaging th.total_shipper,
 .packaging td.packed, .packaging th.packed,
 .packaging td.packed_time, .packaging th.packed_time {
-  background-color: #1d81fa; /* DodgerBlue for packaging */
+  background-color: #f4d803; /* DodgerBlue for packaging */
 }
 
 /* Billing team styling */
@@ -89,6 +91,7 @@ td, th {
 .billing td.party_name, .billing th.party_name,
 .billing td.station_name, .billing th.station_name,
 .billing td.division, .billing th.division,
+.billing td.order_by, .billing th.order_by,
 .billing td.transport, .billing th.transport,
 .billing td.promotional_material, .billing th.promotional_material,
 .billing td.date_and_time, .billing th.date_and_time,
@@ -97,7 +100,7 @@ td, th {
 .billing td.packed_time, .billing th.packed_time,
 .billing td.billed, .billing th.billed,
 .billing td.billed_time, .billing th.billed_time {
-  background-color: #cf0eff; /* Purple for billing */
+  background-color: #f4b300; /* Purple for billing */
 }
 
 /* Dispatch team styling */
