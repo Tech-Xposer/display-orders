@@ -108,6 +108,7 @@ td, th {
 .dispatch td.party_name, .dispatch th.party_name,
 .dispatch td.station_name, .dispatch th.station_name,
 .dispatch td.division, .dispatch th.division,
+.dispatch td.order_by, .dispatch th.order_by,
 .dispatch td.transport, .dispatch th.transport,
 .dispatch td.promotional_material, .dispatch th.promotional_material,
 .dispatch td.date_and_time, .dispatch th.date_and_time,
