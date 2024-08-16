@@ -75,10 +75,11 @@ function App() {
   // Render table headers with resizable columns
   const renderHeader = () => {
     const headers = [
-      "Order Number",
+      "Order No.",
       "Party Name",
       "Station Name",
       "Division",
+      "Order By",
       "Transport",
       "Promotional Material",
       "Date and Time",
@@ -124,6 +125,7 @@ function App() {
                 <td className="party_name">{order.party_name}</td>
                 <td className="station_name">{order.station_name}</td>
                 <td className="division">{order.division}</td>
+                <td className="order_by">{order.order_by || "N/A"}</td>
                 <td className="transport">{order.transport}</td>
                 <td className="promotional_material">
                   {order.promotional_material}
