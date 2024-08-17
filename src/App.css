@@ -18,8 +18,25 @@ button.clear-button {
   border-radius: 5px;
 }
 
+button.restore-button{
+  background-color: #267903; /* Green color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 button.clear-button:hover {
   background-color: #e60000; /* Darker red on hover */
+}
+button.restore-button:hover {
+  background-color: #3e941a; /* Darker red on hover */
 }
 
 table {
