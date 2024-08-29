@@ -70,7 +70,7 @@ function CompletedOrders() {
 				<NavLink
 					to={"/"}
 					className={"bg-yellow-500 p-2 rounded-md text-white mt-4"}>
-					View All Orders
+					View Live Orders
 				</NavLink>
 			
 			</div>
