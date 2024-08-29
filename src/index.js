@@ -6,6 +6,7 @@ import './index.css';
 import App from './App'; // Your home page
 import DeletedOrders from './DeletedOrders';
 import reportWebVitals from './reportWebVitals';
+import CompletedOrders from './CompletedOrders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />  {/* Home page */}
         <Route path="/deleted-orders" element={<DeletedOrders />} />
+        <Route path='/completed' element={<CompletedOrders/>} />
       </Routes>
     </Router>
   </React.StrictMode>

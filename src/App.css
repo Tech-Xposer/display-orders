@@ -139,6 +139,26 @@ td, th {
   background-color: #32CD32; /* LimeGreen for dispatch */
 }
 
+/* On-hold team styling */
+.on-hold td.order_number, .on-hold th.order_number,
+.on-hold td.party_name, .on-hold th.party_name,
+.on-hold td.station_name, .on-hold th.station_name,
+.on-hold td.division, .on-hold th.division,
+.on-hold td.order_by, .on-hold th.order_by,
+.on-hold td.transport, .on-hold th.transport,
+.on-hold td.promotional_material, .on-hold th.promotional_material,
+.on-hold td.date_and_time, .on-hold th.date_and_time,
+.on-hold td.total_shipper, .on-hold th.total_shipper,
+.on-hold td.packed, .on-hold th.packed,
+.on-hold td.packed_time, .on-hold th.packed_time,
+.on-hold td.billed, .on-hold th.billed,
+.on-hold td.billed_time, .on-hold th.billed_time,
+.on-hold td.dispatched, .on-hold th.dispatched,
+.on-hold td.dispatched_time, .on-hold th.dispatched_time,
+.on-hold td.on-hold, .on-hold th.on-hold {
+  background-color: #a5eaa5; /* light green for on-hold */
+}
+
 .no-orders {
   text-align: center;
   font-style: italic;

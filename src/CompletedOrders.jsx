@@ -1,65 +1,23 @@
 import React, { useEffect, useState } from "react";
-import socketIOClient from "socket.io-client";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 import "./App.css";
 import { NavLink } from "react-router-dom";
 
-function App() {
+function CompletedOrders() {
 	const ENDPOINT = process.env.REACT_APP_BACKEND_URL;
 	console.log(ENDPOINT);
 	const [orders, setOrders] = useState([]);
 
 	useEffect(() => {
-		const socket = socketIOClient(ENDPOINT);
-		socket.on("connect", () => {
-			console.log("SocketIO connected");
-		});
-
-		// Handle real-time updates
-		socket.on("update", (data) => {
-			setOrders((prevOrders) => {
-				const existingOrderIndex = prevOrders.findIndex(
-					(order) => order.order_number === data.order_number
-				);
-
-				if (existingOrderIndex > -1) {
-					const updatedOrders = [...prevOrders];
-					updatedOrders[existingOrderIndex] = data;
-					return updatedOrders;
-				} else {
-					return [data, ...prevOrders];
-				}
-			});
-		});
-
 		// Fetch initial orders
-		fetch(`${ENDPOINT}/orders`)
+		fetch(`${ENDPOINT}/completed_orders`)
 			.then((response) => response.json())
 			.then((data) => setOrders(data))
 			.catch((error) => console.error("Error fetching orders:", error));
-
-		// Clean up on component unmount
-		return () => socket.disconnect();
 	}, []);
 
-	const handleClearOrders = () => {
-		if (window.confirm("Do you really want to clear all orders?")) {
-			fetch(`${ENDPOINT}/clear_orders`, {
-				method: "POST",
-			})
-				.then((response) => response.json())
-				.then((data) => {
-					if (data.status === "All orders cleared") {
-						// remove dispatched orders from orders
-						setOrders((prevOrders) =>
-							prevOrders.filter((order) => order.status !== "dispatch")
-						);
-					}
-				})
-				.catch((error) => console.error("Error clearing orders:", error));
-		}
-	};
+	
 
 	const getStatusClass = (status) => {
 		switch (status) {
@@ -71,8 +29,6 @@ function App() {
 				return "billing";
 			case "dispatch":
 				return "dispatch";
-      case "on-hold":
-        return "on-hold";
 			default:
 				return "";
 		}
@@ -109,18 +65,15 @@ function App() {
 
 	return (
 		<div className="App">
-			<h1 className="text-3xl font-bold">Order Display</h1>
-			<div className="flex justify-between items-center">
+			<h1 className="text-3xl font-bold">Completed Orders</h1>
+            <div className="flex justify-center items-center">
 				<NavLink
-					to={"/completed"}
-					className={"bg-slate-500 p-2 rounded-md text-white mt-4"}>
-					View Completed Orders
+					to={"/"}
+					className={"bg-yellow-500 p-2 rounded-md text-white mt-4"}>
+					View All Orders
 				</NavLink>
-				<button onClick={handleClearOrders} className="clear-button">
-					Clear Completed Orders
-				</button>
+			
 			</div>
-
 			<table>
 				<thead>
 					<tr>{renderHeader()}</tr>
@@ -163,4 +116,4 @@ function App() {
 	);
 }
 
-export default App;
+export default CompletedOrders;
