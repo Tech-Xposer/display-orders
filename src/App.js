@@ -110,13 +110,13 @@ function App() {
 	return (
 		<div className="App">
 			<h1 className="text-3xl font-bold">Order Display</h1>
-			<div className="flex justify-between items-center">
+			<div className="flex justify-center items-center gap-5 mt-5" >
 				<NavLink
 					to={"/completed"}
-					className={"bg-slate-500 p-2 rounded-md text-white mt-4"}>
+					className={"bg-green-500 p-3 rounded-md text-white "}>
 					View Completed Orders
 				</NavLink>
-				<button onClick={handleClearOrders} className="clear-button">
+				<button onClick={handleClearOrders} className="bg-red-500 p-3 rounded-md text-white">
 					Clear Completed Orders
 				</button>
 			</div>
@@ -128,7 +128,7 @@ function App() {
 				<tbody>
 					{orders.length === 0 ? (
 						<tr>
-							<td colSpan="14" className="no-orders">
+							<td colSpan="15" className="no-orders">
 								No orders available.
 							</td>
 						</tr>
